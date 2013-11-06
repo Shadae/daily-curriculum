@@ -118,13 +118,43 @@ class Dragon
 
 end
 
-pet = Dragon.new 'Norbert'
-pet.feed
-pet.toss
-pet.walk
-pet.putToBed
-pet.rock
-pet.putToBed
-pet.putToBed
-pet.putToBed
-pet.putToBed
+#Dragon Calling Script
+
+puts "Hi, what is your Baby Dragon's name?"
+name = gets.chomp
+pet = Dragon.new name
+obj = Object.new #blank object
+
+while true
+  puts 
+  puts 'commands: feed, toss, walk, rock, put to bed, exit'
+  command = gets.chomp
+  if command == "exit"
+    exit
+  elsif command == "feed"
+    pet.feed
+  elsif command == "toss"
+    pet.toss
+  elsif command == "walk"
+    pet.walk
+  elsif command == "rock"
+    pet.rock
+  elsif command == "put to bed"
+    pet.putToBed
+  # elsif pet.respond_to?(command) && !obj.respond_to?(command)
+  #   pet.send command
+  else
+    puts "What? Choose a command"
+  end
+end
+
+
+# pet.feed
+# pet.toss
+# pet.walk
+# pet.putToBed
+# pet.rock
+# pet.putToBed
+# pet.putToBed
+# pet.putToBed
+# pet.putToBed
