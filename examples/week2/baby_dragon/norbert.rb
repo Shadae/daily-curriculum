@@ -131,18 +131,18 @@ while true
   command = gets.chomp
   if command == "exit"
     exit
-  elsif command == "feed"
-    pet.feed
-  elsif command == "toss"
-    pet.toss
-  elsif command == "walk"
-    pet.walk
-  elsif command == "rock"
-    pet.rock
-  elsif command == "put to bed"
-    pet.putToBed
-  # elsif pet.respond_to?(command) && !obj.respond_to?(command)
-  #   pet.send command
+  # elsif command == "feed"
+  #   pet.feed
+  # elsif command == "toss"
+  #   pet.toss
+  # elsif command == "walk"
+  #   pet.walk
+  # elsif command == "rock"
+  #   pet.rock
+  # elsif command == "put to bed"
+  #   pet.putToBed
+  elsif pet.respond_to?(command) && !obj.respond_to?(command)
+    pet.send command
   else
     puts "What? Choose a command"
   end
